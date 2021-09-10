@@ -30,7 +30,7 @@ public class JpaTest {
         // do we have entries?
         boolean createNewEntries = (q.getResultList().size() == 0);
 
-        // No, so lets create new entries
+        // No, so let's create new entries
         if (createNewEntries) {
             assertTrue(q.getResultList().size() == 0);
             Family family = new Family();

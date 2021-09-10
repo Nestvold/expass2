@@ -4,13 +4,16 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private String name;
-    private Address address;
+
+    @ManyToMany(mappedBy = ".")
+    private List<Address> addressList = new ArrayList<Address>();
 
     @OneToMany(mappedBy = "person")
     private List<CreditCard> creditCards = new ArrayList<CreditCard>();
@@ -31,12 +34,12 @@ public class Person {
         this.name = name;
     }
 
-    public Address getAddress() {
-        return address;
+    public List<Address> getAddresses() {
+        return this.addressList;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setAddress(List<Address> address) {
+        this.addressList = address;
     }
 
     public void setCreditCards(List<CreditCard> placeHolder) {

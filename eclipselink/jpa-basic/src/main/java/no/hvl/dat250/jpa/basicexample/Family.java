@@ -13,7 +13,7 @@ public class Family {
     private String description;
 
     @OneToMany(mappedBy = "family")
-    private final List<Person> members = new ArrayList<Person>();
+    private final List<Person> members = new ArrayList<>();
 
     public int getId() {
         return id;

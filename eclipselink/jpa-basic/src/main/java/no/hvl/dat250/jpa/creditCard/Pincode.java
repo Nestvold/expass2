@@ -1,9 +1,8 @@
 package no.hvl.dat250.jpa.creditCard;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
 public class Pincode {
 
     @Id

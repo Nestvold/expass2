@@ -1,6 +1,5 @@
 package no.hvl.dat250.jpa.basicexample;
 
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -22,11 +21,11 @@ public class Main {
         }
         System.out.println("Size: " + todoList.size());
 
-        // create new todo
+        //Todo: Done
         entityManager.getTransaction().begin();
         Todo todo = new Todo();
         todo.setSummary("This is a test by Fredrik Nestvold Larsen");
-        todo.setDescription("A student at HVL and UiB");
+        todo.setDescription(" A student at HVL and UiB");
         entityManager.persist(todo);
         entityManager.getTransaction().commit();
 
